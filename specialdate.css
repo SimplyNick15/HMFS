@@ -1,0 +1,28 @@
+body{
+	background-image: url(http://www.nasa.gov/images/content/635040main_potw1213a.jpg);
+	background-attachment:fixed;
+	background-size: cover;
+}
+
+
+.header {
+	text-align: center;
+	color: FFFFFF;
+	font-family: 'Amaranth', sans-serif;
+}
+
+div.off {
+	text-align:center;
+	margin-top: 200px;
+	font-size: 50px
+	float:left;
+
+
+}
+
+form{
+	text-align: center;
+	margin-top: 200px;
+}
+
+

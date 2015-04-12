@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href ="signup.css" rel ="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+		// MAKE SURE jQUERY is loaded
+		$(function(){
+			// Cache the button value for later reference
+			var signupFormButton = $('#signupFormSubmitButton');
+
+			// When someone clicks the button
+			signupFormButton.on('click', function(){
+				// Capture the form value
+				var emailAddress = $('#exampleInputEmail1').val();
+				var body = JSON.stringify({"address":emailAddress});
+				// we want to send an email
+				$.ajax('/processEmail.php', {
+					contentType: 'application/json',
+					dataType: 'json',
+					method: 'POST',
+					headers: {
+						"Content-Type": "application/json",
+						"Authorization": '8a7cc85cc53edd12c18e6578ce18266472ab2897'
+					},
+					data: body
+				}).done( function(data) {
+                                        console.log( data );
+                                        document.location.href( "/Specialdate.html")
+				});
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<form>
+			<div class="form-group">
+				<p class="help box">Please enter the following info to sign up</p>
+
+  			<div class="form-group" id= "email">
+    			<label for="exampleInputEmail1">Email address</label>
+    			<input type="email" class="form-control" id="exampleInputEmail1" 		placeholder="Enter email">
+  			</div>
+  			<div class="form-group" id="password">
+    			<label for="exampleInputPassword1">Password</label>
+    			<input type="password" class="form-control" id="exampleInputPassword1" 	placeholder="Password">
+    		</div>
+    		<div class="form-group" id="confirm">
+    			<label for="exampleInputPassword1">Confirm Password</label><input type="password" class="form-control" id="exampleInputPassword1" 		placeholder="Password">
+  			</div>
+                        
+  			<form>
+  				<a id="signupFormSubmitButton" class="btn btn-default" href="Specialdate.html" role="button">submit</a>
+		</form>
+	</body>
+</html>

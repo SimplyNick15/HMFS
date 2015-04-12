@@ -1,0 +1,63 @@
+body
+{
+	
+	background-image: url(http://www.nasa.gov/images/content/635040main_potw1213a.jpg);
+	background-attachment:fixed;
+	background-size:cover;
+}
+
+.inner{
+	text-align: center;
+	margin-top:300px;
+	font-size: 50px;
+	font-family: 'Amaranth', sans-serif;
+	display:block;
+	color: 
+
+	
+}
+
+.inner a{
+	border: 5px solid white;
+	opacity: 1;
+	padding:10px;
+	text-decoration: none;
+	transition: color .3s, background .3s;
+	border-radius: 10px;
+	color:99CCFF;
+
+
+	
+}
+.inner a:hover:
+{
+	background-color:yellow;
+	color:black;
+}
+
+h1{
+	color:white;
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Amaranth', sans-serif;
+	display:block;
+	background-color:rgba(255,255,255, 0.5);
+	padding: .4em;
+	margin-top:2em;
+}
+
+
+	
+
+
+
+}
+
+
+.inner .class {
+
+}
+
+.class {
+
+}
